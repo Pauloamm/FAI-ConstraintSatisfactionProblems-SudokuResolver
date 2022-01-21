@@ -83,15 +83,12 @@ def SolveSudoku(grid):
                 for possibleNumber in listOfPossibilities:
 
                     grid[y][x] = possibleNumber
-                    if SolveSudoku(grid) == True: return True
+                    if SolveSudoku(grid): return True
 
 
                 #Dead end with no possible numbers
                 grid[y][x] = 0
                 return False
-
-
-
     return True #No more zeros means its completed
 
 if __name__ == '__main__':
